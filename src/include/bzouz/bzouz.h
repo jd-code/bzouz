@@ -38,6 +38,16 @@
 
 using namespace std;
 
+//! returns the release-name of this module
+inline const char * get_bzouz_version (void)
+{
+#ifdef BZOUTOTALOCAL
+    return ("Total-Local® $Id$");
+#else
+    return ("$Id$");
+#endif
+}
+
 //! returns a string from an int (internally via a strstream) [CB]
 inline string itos (int i)
 {
