@@ -170,6 +170,7 @@ AC_OUTPUT([
 	Makefile
 	src/Makefile
 	documentation.dox
+	src/include/Makefile
 	src/include/bzouz/bzouz.h
 ])
 
