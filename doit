@@ -1,5 +1,7 @@
 #!/bin/sh
 
+umask 022
+
 if [ ! "${USERNAME}" ]
 then
     echo
@@ -11,9 +13,10 @@ fi
 
 
 settitle 'bzouz [C]_I__C__D__I__' &&
-configure-jd --prefix=/usr && make-jd && 
+bozoconf-gdevdef --prefix=/usr && make-gdevdef && 
 rm -r /usr/include/bzouz &&
 settitle 'bzouz _C_[I]_C__D__I__' &&
-make-jd install &&
-chmod -R a+rX /usr/include/bzouz
-
+make-gdevdef install &&
+chmod -R a+rX /usr/include/bzouz && exit 0
+echo failed somewhere.......................................;
+exit 1
