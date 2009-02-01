@@ -30,7 +30,7 @@
 
 #include <string>
 #include <iostream>
-#include <strstream>
+#include <sstream>
 
 #ifndef bzouzerr
 #define bzouzerr cerr << __FILE__  << ':'  << __LINE__ << ':' << __PRETTY_FUNCTION__ << ':'
@@ -44,18 +44,18 @@ inline const char * get_bzouz_version (void)
     return ("@BZOUTOTALOCALBUILD@" "$Id$");
 }
 
-//! returns a string from an int (internally via a strstream) [CB]
+//! returns a string from an int (internally via a stringstream) [CB]
 inline string itos (int i)
 {
-    strstream buffstr;
+    stringstream buffstr;
     buffstr << i << ends;	 
     return buffstr.str();
 }
 
-//! returns a string from a double (internally via a strstream) [CB]
+//! returns a string from a double (internally via a stringstream) [CB]
 inline string itos (double i) 
 {
-    strstream buffstr;
+    stringstream buffstr;
     buffstr << i << ends;	 
     return buffstr.str();
 }
